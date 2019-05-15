@@ -16,6 +16,11 @@ class Article {
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     this.domElement.classList.toggle('article-open');
+    if (this.expandButton.textContent === "expand"){
+      this.expandButton.textContent = "collapse";
+    } else {
+      this.expandButton.textContent = "expand";
+    }
   }
 }
 
@@ -31,4 +36,3 @@ articles.forEach(function(article){
   return new Article(article);
 })
 
-//let articles;
